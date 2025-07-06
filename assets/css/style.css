@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+    background: transparent;
+    color: white;
+    position: relative;
+}
+
+.bg-cityscape {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/cityscape.gif') center center/cover no-repeat;
+    z-index: -2;
+    filter: brightness(0.7);
+}
+
+.top-header {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+}
+
+.cloud-nav {
+    display: flex;
+    gap: 12px;
+}
+
+.cloud-btn {
+    background: url('../img/pink_clouds.gif') no-repeat center center;
+    background-size: cover;
+    border: none;
+    padding: 12px 22px;
+    color: rgb(243, 123, 143);
+    font-weight: 645;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-shadow: 0 0 8px #fff;
+    border-radius: 20px;
+    transition: color 0.3s ease;
+    user-select: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cloud-btn:hover {
+    color: rgb(206, 91, 110);
+    text-shadow:
+        0 0 10px #e29abe,
+        0 0 20px #e29abe;
+}
+
+.main-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 11px;
+    user-select: none;
+    padding: 100px 20px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.web-design {
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+.web-design:hover {
+    color: #ff69b4;
+}
+
+.hero-sections {
+    font-size: 7rem;
+    font-weight: 900;
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ffb6c1, #ffc0cb, #ff69b4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+    transition: transform 0.3s ease;
+    margin-top: -5px;
+    line-height: 1;
+}
+
+.hero-sections:hover {
+    transform: scale(1.04);
+}
+
+.seatwork {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: text-shadow 0.3s ease;
+}
+
+.seatwork:hover {
+    text-shadow:
+        0 0 10px #ff69b4,
+        0 0 20px #ff69b4,
+        0 0 30px #ff69b4;
+    color: #ffe4f1;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    user-select: none;
+}
+
+.footer-bg {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: url('../img/bandaid.png') center center/contain no-repeat;
+    background-size: 350px auto;
+    z-index: -1;
+    animation: fadeIn 2s ease forwards;
+}
+
+.footer-text {
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.5s;
+    z-index: 1;
+}
+
+.footer-text p {
+    margin: 4px 0;
+    color: #fff;
+    text-shadow:
+        0 0 4px #ffffff,
+        0 0 8px #ffffff,
+        2px 2px 4px #000000;
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes footerGlow {
+    0% {
+        text-shadow: none;
+        color: #bb495c;
+    }
+    100% {
+        text-shadow:
+            0 0 5px #ffb6c1,
+            0 0 10px #ff69b4,
+            0 0 15px #ff8ac9;
+        color: #ffffff;
+    }
+}
