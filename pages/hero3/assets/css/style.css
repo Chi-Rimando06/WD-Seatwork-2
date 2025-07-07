@@ -1,0 +1,265 @@
+body, html {
+    overflow: hidden;
+}
+
+.hero3-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.hero3-left {
+    width: 75%;
+    background: #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 50px;
+    color: white;
+    box-shadow: inset 0 -80px 80px -20px orange;
+    perspective: 800px;
+}
+
+.alani-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alani-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.alani-logo-img {
+    height: 60px;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.alani-logo-img:hover {
+    animation: logoBounce 0.6s;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px orange)
+            drop-shadow(0 0 16px #ff6f00)
+            drop-shadow(0 0 24px #ff8f00);
+}
+
+.alani-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.alani-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.alani-nav a:hover {
+    color: orange;
+    transform: translateY(-4px);
+    text-shadow: 0 0 10px orange;
+}
+
+.hero3-left-content {
+    margin-top: 40px;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.energy-title {
+    font-size: 4rem;
+    margin-bottom: 0;
+    font-weight: 800;
+    color: #ff3c00;
+    animation: fireText 1s infinite alternate;
+    text-shadow: 0 0 10px #ff3c00, 0 0 30px #d4350d;
+}
+
+.energy-info {
+    margin: 20px 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.buy-btn {
+    margin-top: .4rem;
+    padding: 18px 36px;
+    background: #ff9800;
+    color: #000;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 15px orange;
+    transition: 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: #ffa726;
+    box-shadow: 0 0 25px #ff5722;
+    transform: scale(1.05);
+}
+
+.twist-card {
+    width: 430px;
+    height: 600px;
+    perspective: 1200px;
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    z-index: 1;
+}
+
+.twist-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+.twist-card:hover .twist-inner {
+    transform: rotateY(180deg);
+}
+
+.orange-front, .orange-back {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    filter: drop-shadow(0 0 10px black);
+    transition: transform 0.8s ease-in-out, filter 0.4s ease;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.orange-back {
+    transform: rotateY(180deg);
+    filter: drop-shadow(0 0 20px orange);
+}
+
+.hero3-right {
+    width: 32%;
+    background: linear-gradient(to bottom, #ffa726, #f57c00);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    color: #111;
+    position: relative;
+    box-shadow: inset 0 0 60px rgba(255, 94, 0, 0.3);
+    animation: glowBackground 4s ease-in-out infinite alternate;
+}
+
+@keyframes glowBackground {
+    0% {
+        box-shadow: inset 0 0 30px rgba(255, 115, 0, 0.2);
+    }
+    100% {
+        box-shadow: inset 0 0 60px rgba(255, 115, 0, 0.4);
+    }
+}
+
+.hero3-right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.drink-info {
+    width: 100%;
+}
+
+.drink-block {
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.drink-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(255, 94, 0, 0.5);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.drink-block h2 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.zest-title {
+    color: #4d991d;
+    text-shadow: 0 0 10px #7BC74D;
+}
+
+.bloom-title {
+    color: #c43e73;
+    text-shadow: 0 0 10px #f8488f;
+}
+
+.ember-title {
+    color: #ffb950;
+    text-shadow: 0 0 10px #fc990f;
+}
+
+.drink-block p strong {
+    font-style: italic;
+}
+
+.drink-block p {
+    color: #555;
+}
+
+.drink-block .tagline {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 15px 0;
+}
+
+@keyframes logoBounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-8px); }
+    60%  { transform: translateY(4px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0% { text-shadow: 0 0 5px orange; }
+    100% { text-shadow: 0 0 20px orange; }
+}
+
+@keyframes fireText {
+    0% { color: #ff3c00; text-shadow: 0 0 10px #d4350d; }
+    100% { color: #ff7300; text-shadow: 0 0 10px #fa5320, 0 0 20px #ff5722; }
+}
