@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>COSMIX</title>
+
+    <link rel="stylesheet" href="../hero2/assets/css/style.css" />
+</head>
+<body>
+    <div class="galaxy-bg"></div>
+
+    <header class="cosmix-header">
+        <div class="logo-planet">
+            <img src="../hero2/assets/img/cosmix_logo.png" class="planet-img" alt="Planet Logo" />
+            <span class="logo-text">COSMIX</span>
+        </div>
+
+        <nav class="cosmix-nav">
+            <a href="#">Home</a>
+            <a href="#">About Cosmix</a>
+            <a href="#">Mission</a>
+            <a href="#">The Universe</a>
+            <a href="#">Galaxy Guide</a>
+        </nav>
+
+        <button class="explore-btn">Explore</button>
+    </header>
+
+    <main class="cosmix-main">
+        <h1 class="cosmix-title">
+            <span class="flip-letter">
+                <span class="front">C</span>
+                <span class="back">C</span>
+            </span>
+            <span class="flip-letter moon-letter">
+                <span class="front letter-o">O</span>
+                <span class="back"><img src="../hero2/assets/img/moon.gif" class="moon-img" /></span>
+            </span>
+            <span class="flip-letter">
+                <span class="front">S</span>
+                <span class="back">S</span>
+            </span>
+            <span class="flip-letter">
+                <span class="front">M</span>
+                <span class="back">M</span>
+            </span>
+            <span class="flip-letter">
+                <span class="front">I</span>
+                <span class="back">I</span>
+            </span>
+            <span class="flip-letter">
+                <span class="front">X</span>
+                <span class="back">X</span>
+            </span>
+        </h1>
+
+        <p class="cosmix-tagline">Explore the cosmos like never before.</p>
+
+        <button class="launch-btn" id="launchBtn">Launch Now</button>
+        <img src="../hero2/assets/img/rocket.png" alt="Rocket" id="rocket" class="rocket" />
+    </main>
+
+    <script>
+        const launchBtn = document.querySelector(".launch-btn");
+        const rocket = document.querySelector(".rocket");
+
+        launchBtn.addEventListener("click", () => {
+            launchBtn.style.visibility = "hidden";
+            launchBtn.style.opacity = "0";
+
+            rocket.style.display = "block";
+            rocket.classList.add("fly");
+
+            setTimeout(() => {
+                rocket.classList.remove("fly");
+                rocket.style.display = "none";
+
+                launchBtn.style.visibility = "visible";
+                launchBtn.style.opacity = "1";
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
