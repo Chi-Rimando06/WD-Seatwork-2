@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift Coffee</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <section class="cafe-hero">
+        <div class="sidebar">
+            <div class="logo-trigger">
+                <img src="../hero5/assets/img/coffee_logo.png" alt="Drift Coffee Logo" class="cafe-logo" />
+
+                <div class="sidebar-menu">
+                    <span class="brand-name">Drift Coffee</span>
+                    <nav>
+                        <a href="#">☰ Menu</a>
+                        <hr />
+                        <a href="#">Home</a>
+                        <a href="#">Brews</a>
+                        <a href="#">Collab</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                    <div class="sidebar-footer">@ 2025 Drift Coffee. All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cafe-content">
+            <div class="top-bar">
+                <div class="search-area">
+                    <img src="../hero5/assets/img/search.png" alt="Search" class="search-icon" />
+                    <input type="text" placeholder="Search for coffee..." class="search-bar" />
+                </div>
+
+                <div class="top-right-group">
+                    <div class="nav-cart-wrapper">
+                        <div class="nav-links">
+                            <a href="#" class="active">Most Popular</a>
+                            <a href="#" class="disabled">New</a>
+                            <a href="#" class="disabled">Iced</a>
+                            <a href="#" class="disabled">Hot</a>
+                            <a href="#" class="disabled">Pastries</a>
+                        </div>
+
+                        <div class="cart-container">
+                            <img src="../hero5/assets/img/cart.png" class="cart-icon" alt="Cart">
+                            <div class="cart-bubble">
+                                <strong class="cart-title">Your Cart</strong>
+                                <p class="empty-msg">Your cart is empty</p>
+                                <div class="cart-items"></div>
+                                <p class="cart-total">Total: ₱0</p>
+                                <button class="checkout-btn">Proceed Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="section-heading">MOST POPULAR</h1>
+
+            <div class="latte-gallery">
+                <div class="latte-box">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <img src="../hero5/assets/img/caramel_macch.jpg" alt="Latte 1" />
+                    <p class="latte-name">Caramel Macchiato</p>
+                    <p class="latte-price">₱190</p>
+                </div>
+                <div class="latte-box">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <img src="../hero5/assets/img/mocha.jpg" alt="Latte 2" />
+                    <p class="latte-name">Mocha Blend</p>
+                    <p class="latte-price">₱160</p>
+                </div>
+                <div class="latte-box">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <img src="../hero5/assets/img/creme_brulee.jpg" alt="Latte 3" />
+                    <p class="latte-name">Crème Brûlée</p>
+                    <p class="latte-price">₱180</p>
+                </div>
+                <div class="latte-box">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <img src="../hero5/assets/img/spanish.jpg" alt="Latte 4" />
+                    <p class="latte-name">Spanish Latte</p>
+                    <p class="latte-price">₱145</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const cartBubble = document.querySelector('.cart-bubble');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const emptyMsg = document.querySelector('.empty-msg');
+        const cartTotalText = document.querySelector('.cart-total');
+        const cartTitle = document.querySelector('.cart-title');
+
+        let cartItems = [];
+        let total = 0;
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const latteBox = button.closest('.latte-box');
+                const name = latteBox.querySelector('.latte-name').innerText;
+                const priceText = latteBox.querySelector('.latte-price').innerText;
+                const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
+
+                cartItems.push({ name, price });
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            if (emptyMsg) emptyMsg.remove();
+
+            cartItemsContainer.innerHTML = '';
+            total = 0;
+
+            cartItems.forEach(item => {
+                const p = document.createElement('p');
+                p.textContent = `${item.name} - ₱${item.price}`;
+                cartItemsContainer.appendChild(p);
+                total += item.price;
+            });
+
+            cartTitle.textContent = "Your Cart";
+            cartTotalText.textContent = `Total: ₱${total}`;
+        }
+    </script>
+</body>
+</html>
