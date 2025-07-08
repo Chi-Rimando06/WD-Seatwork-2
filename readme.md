@@ -4,14 +4,13 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
+  <a href="https://github.com/Chi-Rimando06/">
     <img src="./assets/img/kc_logo.png" alt="KC" width="150" height="200">
   </a>
   <h3 align="center">WD-Seatwork-2</h3>
 </div>
-<!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+  This project showcases five unique hero sections I designed for different brand concepts. As someone still learning, my goal was to explore creative and engaging web design while improving my skills in layout, interactivity, and branding. Each section includes key elements like animated text, styled buttons, product displays, and responsive features. I used HTML and CSS to build structure and design, and I’m starting to apply JavaScript for interactive elements like carts and filters. Overall, this project reflects my progress and ongoing growth in front-end development, especially as I continue learning JavaScript.
 </div>
 
 <br />
@@ -52,19 +51,10 @@
 
 ## Overview
 
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Description of the project in details.
-
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+  This project showcases five unique hero sections I designed for different brand concepts. As someone still learning, my goal was to explore creative and engaging web design while improving my skills in layout, interactivity, and branding. Each section includes key elements like animated text, styled buttons, product displays, and responsive features. I used HTML and CSS to build structure and design, and I’m starting to apply JavaScript for interactive elements like carts and filters. Overall, this project reflects my progress and ongoing growth in front-end development, especially as I continue learning JavaScript.
 
 ### Key Components
 - MultiPage Website
-- Parallax transition
 
 ### Technology
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -107,7 +97,6 @@ WD-ProjectName
 
 ## Resources
 
-<!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Hero Section Designs | This Dribbble page shows examples of hero sections such as eye-catching website headers designed to grab attention, deliver a message quickly, and often include visuals, text, and call-to-action buttons to guide users. | https://dribbble.com/tags/hero-section |
